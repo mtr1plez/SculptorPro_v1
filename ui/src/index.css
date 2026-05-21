@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background-color: #09090b; /* Темный фон по умолчанию */
+  color: #fafafa;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  overflow: hidden; /* Убираем скролл самого окна */
+}
+
+.splash-progress {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.splash-progress__bar {
+  height: 100%;
+  width: 45%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #06b6d4 0%, #3b82f6 44%, #d946ef 100%);
+  box-shadow: 0 0 24px rgba(59, 130, 246, 0.28);
+  animation: splash-progress-slide 1.35s ease-in-out infinite;
+}
+
+@keyframes splash-progress-slide {
+  0% {
+    transform: translateX(-105%);
+  }
+
+  52% {
+    transform: translateX(55%);
+  }
+
+  100% {
+    transform: translateX(225%);
+  }
+}

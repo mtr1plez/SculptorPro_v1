@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+.venv/
+venv/
+ENV/
+env/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Node / Electron
+ui/node_modules/
+ui/dist/
+ui/dist-ssr/
+ui/.vite/
+
+# Legacy / archived product artifacts
+YouTubeToDeploy/node_modules/
+YouTubeToDeploy/frontend/node_modules/
+YouTubeToDeploy/backend/.venv/
+
+# OS/editor noise
+.DS_Store
+.idea/
+.vscode/
+
+# Application data and generated assets
+_library/
+_shorts/
+_studio/
+projects/*
+!projects/placeholder.txt
+logs/
+*.log
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+*.mp3
+*.wav
+*.xml
+*.json.tmp
+
+# Local scratch / verification outputs
+frontend_test.log
+pcm_test.wav
+test_output.xml
+tests/temp_test_clip_4_edl.json
+repro_xml_fix.py
+test_gap.py
+test_edl.json

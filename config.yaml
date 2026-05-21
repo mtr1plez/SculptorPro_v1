@@ -1,0 +1,16 @@
+# config.yaml
+paths:
+  library: "./_library"
+  projects: "./projects"
+
+models:
+  whisper: "small"
+  gemini: "gemini-2.5-flash"
+  clip: "ViT-B/32"
+  face_detection: "buffalo_s"
+
+# Secrets must come from environment variables, not from tracked files.
+# Supported keys:
+#   GOOGLE_API_KEY
+#   YOUTUBE_API_KEY
+#   TMDB_API_KEY

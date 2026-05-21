@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sculptor_pro_backend"
+version = "0.1.0"
+description = "Backend for SculptorPro"
+readme = "README.md"
+requires-python = ">=3.9"
+dynamic = ["dependencies"]
+
+[project.optional-dependencies]
+dev = [
+    "mypy>=1.0",
+    "pre-commit>=3.0",
+    "pytest>=8.0",
+    "ruff>=0.3",
+]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "I"]
+# E: pycodestyle errors
+# F: pyflakes
+# B: flake8-bugbear
+# I: isort
+
+[tool.mypy]
+python_version = "3.9"
+strict = false
+ignore_missing_imports = true
+check_untyped_defs = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "src/tests",
+]
+python_files = "test_*.py"
